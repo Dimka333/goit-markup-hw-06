@@ -129,10 +129,9 @@ body {
   line-height: 1.17;
   letter-spacing: 0.01em;
   color: var(--secondary-text-color);
+  margin-bottom: 5px;
 }
-.checkbox {
-  margin-bottom: 30px;
-}
+
 .checkbox-text {
   font-weight: 400;
   font-size: 14px;
@@ -150,12 +149,14 @@ body {
 }
 .checkbox {
   position: absolute;
+  margin-bottom: 30px;
   width: 1px;
   height: 1px;
   overflow: hidden;
   clip: rect(0 0 0 0);
 }
-.form-check {
+.form-check::before {
+  content: ' ';
   width: 16px;
   height: 16px;
   position: absolute;
@@ -167,6 +168,7 @@ body {
   background-repeat: no-repeat;
   transition: background-image var(--timing-function) var(--transition-duration);
 }
+
 .checkbox:checked ~ .form-check {
   background-image: url(../img/icon-check.svg);
 }
@@ -177,7 +179,11 @@ body {
   padding-left: 34px;
   padding-right: 8px;
 }
+
 .form-submit-btn {
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, 0%);
   width: 200px;
   height: 50px;
   background-color: var(--main-focus-color);
@@ -192,12 +198,6 @@ body {
     0px 2px 1px rgba(0, 0, 0, 0.2);
   cursor: pointer;
 }
-
-.submit-btn {
-  display: flex;
-  justify-content: center;
-}
-
 .close-btn {
   position: absolute;
   top: 8px;
@@ -730,6 +730,54 @@ body {
   transition: fill var(--transition-duration) var(--timing-function);
 }
 
+.footer-form-container {
+  display: inline-block;
+  padding: 72px 0px 94px 90px;
+}
+.footer-join-text {
+  width: 100%;
+}
+.footer-label {
+}
+.footer-input {
+  padding: 15px;
+  margin-right: 12px;
+  width: 358px;
+  height: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  background-color: var(--footer-bg-color);
+  color: #fff;
+}
+.footer-input::placeholder {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+}
+.footer-label-btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 50px;
+  background-color: var(--main-focus-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.875;
+  letter-spacing: 0.06em;
+  color: #ffffff;
+}
+.footer-join-icon {
+  width: 24px;
+  height: 24px;
+  fill: #fff;
+  margin-left: 10px;
+}
 /* ======END FOOTER====== */
 
 /* ======PORTFOLIO====== */
