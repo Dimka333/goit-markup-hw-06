@@ -169,7 +169,7 @@ body {
   transition: background-image var(--timing-function) var(--transition-duration);
 }
 
-.checkbox:checked ~ .form-check {
+.checkbox:checked ~ .form-check::before {
   background-image: url(../img/icon-check.svg);
 }
 .label-checkbox {
